@@ -42,23 +42,25 @@ header{
     border: none;
     outline: none;
     appearance: none;
-    border-radius: 10px;
-    border: 1px solid #416788;
-    background-color: #ffffff83;
+    background-color: transparent;
     height: 1.6rem;
     width: 6rem;
     padding: 4px;
     color: currentColor;
     cursor: pointer;
-    transition: all 0.3s;
+    position: relative;
 }
 
 .search .select-wrap{
     position: relative;
     margin-right: 2rem;
+    border-radius: 10px;
+    border: 1px solid #416788;
+    background-color: #ffffff83;
+    transition: all 0.3s;
 }
 
-.search .select-wrap::after{
+.search .select-wrap::before{
     content: '';
     position: absolute;
     right: 8px;
@@ -84,8 +86,8 @@ header{
 
 .search .search-wrap input:hover,
 .search .search-wrap input:focus,
-.search select:hover,
-.search select:focus{
+.search .select-wrap:hover,
+.search .select-wrap:focus{
     background-color: white;
 }
 
@@ -143,4 +145,8 @@ main .icons .icon{
 main .icons .icon i{
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+main .icons .icon .title{
+    text-transform: capitalize;
 }
